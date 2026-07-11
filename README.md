@@ -63,15 +63,15 @@ MODIFY COLUMN quantiy INT,
 MODIFY COLUMN price_per_unit INT,
 MODIFY COLUMN cogs INT,
 MODIFY COLUMN total_sale INT;
-
+```
 
 
 ## 2. Data Exploration & Cleaning
-** Null Inspection: Querying rows containing missing data points across any critical dimension.
-** Data Scrubbing: Purging incomplete transaction rows from the table.
-** High-level Profiling: Calculating baseline counts for unique indicators like customers and product groups.
+Null Inspection: Querying rows containing missing data points across any critical dimension.
+Data Scrubbing: Purging incomplete transaction rows from the table.
+High-level Profiling: Calculating baseline counts for unique indicators like customers and product groups.
 
-
+```sql
 -- Viewing NULL values in the table
 SELECT * FROM retail_sales
 WHERE
@@ -93,6 +93,7 @@ SELECT COUNT(*) as total_sales FROM retail_sales;
 SELECT COUNT(DISTINCT customer_id) as No_of_customer FROM retail_sales;
 SELECT COUNT(DISTINCT category) as total_category FROM retail_sales;
 SELECT DISTINCT category as list_of_categories FROM retail_sales;
+```
 
 3. Data Analysis & Business Key Problems
 Below are the production SQL analytical queries written to address targeted business questions:
