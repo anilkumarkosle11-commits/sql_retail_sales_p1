@@ -231,6 +231,7 @@ GROUP BY shift;
 **High-Value Segments:** Filtered transactions where total checkout amounts exceed 1000 point to key premium spending clusters.
 **Sales Trends:** Grouping metrics over yearly and monthly periods clearly spotlights peak historical shopping cycles.
 **Operational Splits:** Converting exact timestamp markers using conditional formatting buckets orders into distinct staffing or marketing shifts (Morning, Afternoon, Evening).
+---
 
 ## Conclusion
 This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, handling text-to-numeric type transitions due to messy source formatting, structured data cleaning, exploratory data analysis, and advanced relational queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
