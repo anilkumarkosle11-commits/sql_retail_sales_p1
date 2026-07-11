@@ -71,7 +71,7 @@ Null Inspection: Querying rows containing missing data points across any critica
 Data Scrubbing: Purging incomplete transaction rows from the table.
 High-level Profiling: Calculating baseline counts for unique indicators like customers and product groups.
 
-```sql
+
 -- Viewing NULL values in the table
 SELECT * FROM retail_sales
 WHERE
@@ -79,7 +79,7 @@ WHERE
     customer_id IS NULL OR gender IS NULL OR age IS NULL OR category IS NULL OR
     quantiy IS NULL OR price_per_unit IS NULL OR cogs IS NULL OR total_sale IS NULL;
 
-```sql
+
 -- Data Cleaning: Deleting unusable records
 SET SQL_SAFE_UPDATES = 0;
 DELETE FROM retail_sales
@@ -88,7 +88,6 @@ WHERE
     customer_id IS NULL OR gender IS NULL OR age IS NULL OR category IS NULL OR
     quantiy IS NULL OR price_per_unit IS NULL OR cogs IS NULL OR total_sale IS NULL;
 
-```sql
 -- Baseline Metrics Explorations
 SELECT COUNT(*) as total_sales FROM retail_sales;
 SELECT COUNT(DISTINCT customer_id) as No_of_customer FROM retail_sales;
