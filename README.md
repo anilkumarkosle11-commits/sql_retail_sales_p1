@@ -66,10 +66,10 @@ MODIFY COLUMN total_sale INT;
 
 
 
-### 2. Data Exploration & Cleaning
-Null Inspection: Querying rows containing missing data points across any critical dimension.
-Data Scrubbing: Purging incomplete transaction rows from the table.
-High-level Profiling: Calculating baseline counts for unique indicators like customers and product groups.
+## 2. Data Exploration & Cleaning
+** Null Inspection: Querying rows containing missing data points across any critical dimension.
+** Data Scrubbing: Purging incomplete transaction rows from the table.
+** High-level Profiling: Calculating baseline counts for unique indicators like customers and product groups.
 
 
 -- Viewing NULL values in the table
