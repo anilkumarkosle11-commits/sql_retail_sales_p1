@@ -95,7 +95,7 @@ SELECT COUNT(DISTINCT category) as total_category FROM retail_sales;
 SELECT DISTINCT category as list_of_categories FROM retail_sales;
 ```
 
-3. Data Analysis & Business Key Problems
+## 3. Data Analysis & Business Key Problems
 Below are the production SQL analytical queries written to address targeted business questions:
 
 Q.1 Retrieve all columns for sales made on '2022-11-05'
@@ -226,26 +226,26 @@ FROM hourly_sales
 GROUP BY shift;
 ```
 
-Findings
+## Findings
 Customer Demographics: The target ecosystem includes records with a wide variance in customer age groups, distributed strategically over core categories like Clothing and Beauty.
 High-Value Segments: Filtered transactions where total checkout amounts exceed 1000 point to key premium spending clusters.
 Sales Trends: Grouping metrics over yearly and monthly periods clearly spotlights peak historical shopping cycles.
 Operational Splits: Converting exact timestamp markers using conditional formatting buckets orders into distinct staffing or marketing shifts (Morning, Afternoon, Evening).
 
-Conclusion
+## Conclusion
 This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, handling text-to-numeric type transitions due to messy source formatting, structured data cleaning, exploratory data analysis, and advanced relational queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
 
 
-How to Use
+## How to Use
 Clone the Repository: Clone this project repository to your local directory.
 Set Up the Database: Execute the queries provided under the Database Setup portion inside your preferred MySQL interface.
 Run the Analysis: Walk through the formatted question scripts to verify data processing rules and performance metrics locally.
 
 
-Author - Anil Kosle
+## Author - Anil Kosle
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
 
-Stay Updated and Join the Community
+## Stay Updated and Join the Community
 LinkedIn: linkedin.com/in/anil-kumar-kosle-78943b200
 
 
