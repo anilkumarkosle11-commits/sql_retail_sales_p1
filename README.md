@@ -100,9 +100,11 @@ Below are the production SQL analytical queries written to address targeted busi
 
 Q.1 Retrieve all columns for sales made on '2022-11-05'
 
+```sql
 SELECT *
 FROM retail_sales
 WHERE sale_date = '2022-11-05';
+```
 
 Q.2 Retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 10 in the month of Nov-2022
 
