@@ -107,42 +107,47 @@ WHERE sale_date = '2022-11-05';
 ```
 
 Q.2 Retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 10 in the month of Nov-2022
-
+```sql
 SELECT *
 FROM retail_sales
 WHERE category = 'Clothing'
        AND quantiy = '3'
        AND sale_date >='2022-11-01'
        AND sale_date <='2022-11-30';
+```
 
 Q.3 Calculate the total sales (total_sale) for each category
-
+```sql
 SELECT category, SUM(total_sale) as net_sale
 FROM retail_sales
 GROUP BY category;
+```
 
 Q.4 Find the average age of customers who purchased items from the 'Beauty' category
-
+```sql
 SELECT category, ROUND(AVG(age),2) as average_age
 FROM retail_sales
 WHERE category = 'Beauty'
 GROUP BY category;
+```
 
 Q.5 Find all transactions where the total_sale is greater than 1000
-
+```sql
 SELECT *
 FROM retail_sales
 WHERE total_sale >1000;
+```
 
 Q.6 Find the total number of transactions (transaction_id) made by each gender in each category
-
+```sql
 SELECT category, gender, COUNT(transactions_id) as total_transactions
 FROM retail_sales
 GROUP BY category, gender
 ORDER BY category;
+```
 
 Q.7 Calculate the average sale for each month and discover the best-selling month in each year
-
+```sql
 SELECT 
     year,
     month,
@@ -158,10 +163,11 @@ FROM
     GROUP BY year, month
 ) as t1
 WHERE sales_rank = 1;
+```
 
 Q.8 Find the top 5 customers based on the highest total sales
 Approach 1 (Window Function):
-
+```sql
 SELECT *
 FROM
 (
@@ -172,23 +178,26 @@ FROM
     GROUP BY customer_id
 ) as t1
 WHERE customer_rank <=5;
+```
 
 Approach 2 (Aggregation & Limit):
-
+```sql
 SELECT customer_id, SUM(total_sale) as total_sale
 FROM retail_sales
 GROUP BY customer_id
 ORDER BY total_sale DESC
 LIMIT 5;
+```
 
 Q.9 Find the number of unique customers who purchased items from each category
-
+```sql
 SELECT category, COUNT(DISTINCT customer_id) as unique_id
 FROM retail_sales
 GROUP BY category;
+```
 
 Q.9 (Modified) Find the number of unique customers who purchased items across all categories (3 categories total)
-
+```sql
 SELECT COUNT(customer_id)
 FROM
 (
@@ -197,9 +206,10 @@ FROM
     GROUP BY customer_id
 ) as t1
 WHERE purchase_category = 3;
+```
 
 Q.10 Segment transactions into explicit time shifts (Morning <=12, Afternoon Between 12 & 17, Evening >17)
-
+```sql
 WITH hourly_sales
 AS
 (
@@ -214,6 +224,7 @@ AS
 SELECT shift, COUNT(*) as total_orders
 FROM hourly_sales
 GROUP BY shift;
+```
 
 Findings
 Customer Demographics: The target ecosystem includes records with a wide variance in customer age groups, distributed strategically over core categories like Clothing and Beauty.
